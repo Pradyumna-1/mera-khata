@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Note-Taking</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div class="main w-full min-h-screen bg-zinc-900">
+      <div class="form p-10 text-white">
+        <a class="text-blue-500 inline-block mb-10" href="/">Go back to home</a>
+        <form action="/edit" method="post">
+          <input
+            type="text"
+            name="previous"
+            placeholder="Edit task Name"
+            class="bg-zinc-700 w-full block text-zinc-300 outline-none rounded-md px-5 py-2 text-white"
+            value="<%=filename  %>"
+          />
+          <input
+            type="text"
+            name="new"
+            placeholder="Enter new task Name"
+            class="bg-zinc-700 w-full block outline-none rounded-md px-5 py-2 text-white mt-2"
+          />
+          <!-- <textarea
+            name="details"
+            class="block w-full rounded-md outline-none mt-2 px-5 py-2 resize-none bg-zinc-700 text-white text-lg"
+            placeholder="Write the task details here..."
+          ></textarea> -->
+          <input
+            class="mt-2 bg-yellow-700 px-5 py-2 rounded-md cursor-pointer"
+            type="submit"
+            value="update"
+          />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
